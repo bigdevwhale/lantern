@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A slide of amber glass in a brass ring, with the lantern cut out of card in front of it. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
+    <path android:pathData="M54,54m-27,0a27,27 0,1 1,54 0a27,27 0,1 1,-54 0">
+        <aapt:attr name="android:fillColor">
+            <gradient android:type="radial" android:centerX="49" android:centerY="47" android:gradientRadius="34" android:startColor="#FFFFE2A6" android:centerColor="#FFE9A23B" android:endColor="#FF6E3E10" />
+        </aapt:attr>
+    </path>
+    <path android:strokeColor="#FFC9A25A" android:strokeWidth="3" android:pathData="M54,54m-28.5,0a28.5,28.5 0,1 1,57 0a28.5,28.5 0,1 1,-57 0" />
+    <path android:fillColor="#FF130B07" android:fillType="evenOdd" android:pathData="M49.5,30 a4.5,4.5 0 1,1 9,0 a4.5,4.5 0 1,1 -9,0 Z M51.6,30 a2.4,2.4 0 1,0 4.8,0 a2.4,2.4 0 1,0 -4.8,0 Z M44,40 L54,33 L64,40 Z M45,40 L63,40 L63,66 L45,66 Z M43,66 L65,66 L62,71 L46,71 Z" />
+    <path android:fillColor="#FFF6C46A" android:pathData="M48,43 L52.6,43 L52.6,52 L48,52 Z M55.4,43 L60,43 L60,52 L55.4,52 Z M48,55 L52.6,55 L52.6,63 L48,63 Z M55.4,55 L60,55 L60,63 L55.4,63 Z" />
+</vector>
