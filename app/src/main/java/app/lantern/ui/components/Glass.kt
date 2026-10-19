@@ -85,7 +85,7 @@ fun DrawScope.glass(
 /** A slide on screen, its lamp flickering a little as a flame would. */
 @Composable
 fun Glass(fig: Figure?, color: Color, size: Dp, modifier: Modifier = Modifier, light: Float = 1f, halo: Boolean = true, mirror: Boolean = false, flicker: Boolean = true, seed: Int = 0) {
-    val f = if (flicker) {
+    val f = if (flicker && !app.lantern.BuildConfig.SHOTS) {
         val t = rememberInfiniteTransition(label = "flame")
         val v by t.animateFloat(0.93f, 1f, infiniteRepeatable(tween(1700 + seed % 5 * 230, easing = LinearEasing), RepeatMode.Reverse), label = "flicker")
         v

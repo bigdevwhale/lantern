@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/logo.png" width="96" alt="Lantern logo" />
+
 # Lantern
 
 ### Bedtime tales you make up together.
@@ -7,11 +9,14 @@
 *A magic lantern on the phone: light it, and slides of painted glass come out — a hero, a place, a magic thing, a trouble, a helper. The parent and the child make up the tale from them, with the phone face down. Free, no ads, no account, no internet permission.*
 
 [![Android CI](https://github.com/bigdevwhale/lantern/actions/workflows/android.yml/badge.svg)](https://github.com/bigdevwhale/lantern/actions/workflows/android.yml)
+[![Release](https://img.shields.io/github/v/release/bigdevwhale/lantern?color=E9A23B&label=download&logo=android)](https://github.com/bigdevwhale/lantern/releases/latest)
 ![Android 9+](https://img.shields.io/badge/Android-9%2B-3C9D50?logo=android&logoColor=white)
 ![Languages](https://img.shields.io/badge/lang-EN%20%7C%20RU-E9A23B)
 [![License: MIT](https://img.shields.io/badge/license-MIT-C9A25A)](LICENSE)
 
-**English** · [Changelog](CHANGELOG.md)
+**English** · [Русский](README.ru.md) · [Changelog](CHANGELOG.md)
+
+<img src="docs/screenshots/en/2-glass.jpg" width="200" /> <img src="docs/screenshots/en/4-twist.jpg" width="200" /> <img src="docs/screenshots/en/5-ending.jpg" width="200" /> <img src="docs/screenshots/en/8-world.jpg" width="200" />
 
 </div>
 
@@ -41,11 +46,16 @@
 
 No account, no cloud, no analytics and no internet permission. The microphone is used only when you choose to record a tale; the recording stays on the phone.
 
+## Screenshots
+
+<img src="docs/screenshots/en/1-lantern.jpg" width="200" /> <img src="docs/screenshots/en/3-before.jpg" width="200" /> <img src="docs/screenshots/en/6-tale.jpg" width="200" /> <img src="docs/screenshots/en/7-shelf.jpg" width="200" /> <img src="docs/screenshots/en/9-box.jpg" width="200" />
+
 ## Build
 
 ```bash
 ./gradlew assembleDebug             # app.lantern.dev
 ./gradlew assembleDebug -Pdemo      # app.lantern.demo, a made-up family's three weeks of tales
+bash tools/capture.sh <dir> en|ru   # screenshots from a -Pdemo -Pshots build
 ./gradlew testDebugUnitTest         # unit tests
 ./gradlew testDebugUnitTest -Prender --tests '*RenderArt*'   # every cut-out to app/build/art
 ```

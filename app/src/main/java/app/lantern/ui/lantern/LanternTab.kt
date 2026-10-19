@@ -226,9 +226,9 @@ fun HandPicker(h: Hand, onChange: (Hand) -> Unit) {
 @Composable
 private fun Projector(home: Home) {
     val box = home.box
-    var who by remember { mutableStateOf(box.creatures.random().key) }
+    var who by remember { mutableStateOf(if (app.lantern.BuildConfig.SHOTS) "fox" else box.creatures.random().key) }
     LaunchedEffect(Unit) {
-        while (true) {
+        while (!app.lantern.BuildConfig.SHOTS) {
             delay(2600)
             who = box.creatures.filter { it.key != who }.random().key
         }

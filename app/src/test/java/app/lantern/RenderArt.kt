@@ -18,6 +18,7 @@ import app.lantern.ui.art.Places
 import app.lantern.ui.art.Treasures
 import app.lantern.ui.art.Wardrobe
 import app.lantern.ui.art.figure
+import app.lantern.ui.components.glass
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
@@ -73,4 +74,16 @@ class RenderArt {
 
     @Test
     fun glyphs() = sheet("glyphs", Glyphs.all.toList(), cols = 8, round = true)
+
+    /** The logo for the README and the Stillcraft page: the lantern on its amber glass. */
+    @Test
+    fun logo() {
+        val px = 512
+        val image = ImageBitmap(px, px)
+        CanvasDrawScope().draw(Density(1f), LayoutDirection.Ltr, Canvas(image), Size(px.toFloat(), px.toFloat())) {
+            drawRoundRect(Color(0xFF0D0A0E), cornerRadius = androidx.compose.ui.geometry.CornerRadius(112f))
+            run { glass(Treasures.all["lantern"], Color(0xFFE9A23B), Offset(256f, 256f), 200f, halo = 0.8f) }
+        }
+        File(out, "logo.png").outputStream().use { image.asAndroidBitmap().compress(android.graphics.Bitmap.CompressFormat.PNG, 100, it) }
+    }
 }

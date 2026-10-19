@@ -26,7 +26,12 @@ object Evenings {
      */
     suspend fun deal(c: AppContainer, code: String = "", keep: Map<Kind, Slide> = emptyMap(), sequelOf: Long = 0, hand: Hand? = null) {
         val s = c.settings.now()
-        val seed = if (code.isNotEmpty()) Lantern.Code.seed(code) else System.nanoTime()
+        val seed = when {
+            code.isNotEmpty() -> Lantern.Code.seed(code)
+            // The same lovely deal in every screenshot.
+            app.lantern.BuildConfig.SHOTS -> 11L
+            else -> System.nanoTime()
+        }
         val h = (if (code.isNotEmpty()) Lantern.Code.hand(code, s.hand) else null) ?: hand ?: s.hand
         val box = if (code.isNotEmpty()) Box.common(LocalDate.now()) else box(c, s)
         val slides = Lantern.deal(h, box, Random(seed), keep)
