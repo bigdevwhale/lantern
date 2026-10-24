@@ -1,5 +1,11 @@
 # Changelog
 
+<!--
+Telegram: end each version's section with a hidden block for the StillCraft chat. Start it with a
+line "<!-- tg", then 2-4 short lines in Russian for users (what is new, what is fixed), no markdown,
+then close it like any HTML comment. The release notes carry it, and the chat bot posts those lines.
+-->
+
 ## [1.0.0]
 
 - First release: a magic lantern that deals slides of painted glass — hero with a job, place, magic thing with a power, trouble, helper, quirk — for making up bedtime tales together.
