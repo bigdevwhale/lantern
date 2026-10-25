@@ -39,6 +39,7 @@ import app.lantern.ui.Go
 import app.lantern.ui.Home
 import app.lantern.ui.Language
 import app.lantern.ui.components.Chip
+import app.lantern.ui.components.CommunityLinks
 import app.lantern.ui.components.ConfirmDialog
 import app.lantern.ui.components.InfoRow
 import app.lantern.ui.components.SectionTitle
@@ -112,6 +113,8 @@ fun SettingsScreen(home: Home, go: Go) {
                 InfoRow(Icons.Rounded.Upload, stringResource(R.string.backup_export_sub), stringResource(R.string.backup_export)) { export.launch("lantern-${LocalDate.now()}.json") }
                 InfoRow(Icons.Rounded.Download, stringResource(R.string.backup_import_sub), stringResource(R.string.backup_import)) { import.launch(arrayOf("application/json", "text/plain", "*/*")) }
             }
+
+            CommunityLinks()
 
             SectionTitle(stringResource(R.string.set_about))
             Text(stringResource(R.string.set_privacy), style = UType.Sub)
